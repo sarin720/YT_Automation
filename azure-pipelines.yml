@@ -10,9 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: docker pull your_selenium_docker_image:latest  # Pull the Docker image
+- script: docker pull selenium/standalone-chrome:latest  # Pull the Docker image
 
-- script: docker run -d --name selenium_container your_selenium_docker_image:latest
+- script: docker run -d --name selenium_container selenium/standalone-chrome:latest
 
 - script: docker stop selenium_container  # Stop the Selenium container
 
