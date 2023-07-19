@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="All Tests(failed)">
+    <classes>
+      <class name="automationtest.tests.JobsTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="createNewJob" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- automationtest.tests.JobsTest -->
+    </classes>
+  </test> <!-- All Tests(failed) -->
+</suite> <!-- Failed suite [Suite] -->
