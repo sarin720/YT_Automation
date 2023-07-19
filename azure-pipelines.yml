@@ -10,6 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- script: docker pull your_selenium_docker_image:latest  # Pull the Docker image
+
+- script: docker run -d --name selenium_container your_selenium_docker_image:latest
+
+- script: docker stop selenium_container  # Stop the Selenium container
+
+- script: docker rm selenium_container  # Remove the Selenium container
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
