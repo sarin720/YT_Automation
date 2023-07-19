@@ -28,3 +28,12 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'test'
+    
+- task: Docker@2
+  displayName: 'Docker'
+  inputs:
+    containerRegistry: Docker
+    repository: selenium/standalone-chrome
+    command: pull
+    tags: latest
+
